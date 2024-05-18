@@ -1,0 +1,682 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pixel Buttons</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+<style>body {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 3em;
+    
+    height: 100vh;
+    width: 100vw;
+    
+    font-family: 'Press Start 2P';
+    background-color: white;
+    
+    overflow: hidden;
+  }
+  
+  /* ------------------- Button Grid styles ------------------- */
+  .pixel-grid {
+    display: grid;
+    row-gap: 0;
+    column-gap:0;
+    grid-template-columns: repeat(20, 20px);
+    grid-template-rows: repeat(11, 20px);
+    
+    filter: drop-shadow(0 20px 0 #545454);
+    
+    cursor: pointer;
+  }
+  
+  .pixel-grid:active {
+    transform: translate(0,20px);
+    filter: drop-shadow(0 0 0 #545454)
+  }
+  
+  /* ------------------- pixel styles ------------------- */
+  .transparent {
+    background-color: transparent;
+    height: 20px;
+    width: 20px;
+  }
+  
+  .black {
+    background-color: black;
+    height: 20px;
+    width: 20px;
+  }
+  
+  .lightg {
+    background-color: purple;
+    height: 20px;
+    width: 20px;
+  }
+  
+  .white {
+    background-color: white;
+    height: 20px;
+    width: 20px;
+  }
+  
+  .grey {
+    background-color: #545454;
+    height: 20px;
+    width: 20px;
+  }
+  
+  /* ------------------- text styles ------------------- */
+  .text {
+    filter: none;
+    position: absolute;
+    display: block;
+    
+    z-index: 5;
+  
+    font-size: 40px;
+    width: 100%;
+    height: 100%;
+    top: 28%;
+    text-align: center;
+  }
+  
+  a {
+    text-decoration: none;
+    color: black;
+  }
+  
+  /* ------------------- background styles ------------------- */
+  .background {
+    position: absolute;
+    z-index: -5;
+    
+    display: grid;
+    grid-template-columns: repeat(14, 200px);
+    grid-template-rows: repeat(5, 200px);
+  }
+  
+  .background-tile {
+    height: 20px;
+    width: 20px;
+  
+    box-shadow: 
+      20px 20px 0 0 #800080, 
+      40px 20px 0 0 #9370DB, 
+      60px 20px 0 0 #800080, 
+      80px 20px 0 0 #9370DB, 
+      100px 20px 0 0 #800080, 
+      120px 20px 0 0 #9370DB, 
+      140px 20px 0 0 #800080, 
+      160px 20px 0 0 #9370DB, 
+      180px 20px 0 0 #800080, 
+      200px 20px 0 0 #9370DB, 
+      20px 40px 0 0 #800080, 
+      40px 40px 0 0 #9370DB, 
+      60px 40px 0 0 #800080, 
+      80px 40px 0 0 #9370DB, 
+      100px 40px 0 0 #800080, 
+      120px 40px 0 0 #9370DB, 
+      140px 40px 0 0 #800080, 
+      160px 40px 0 0 #9370DB, 
+      180px 40px 0 0 #800080, 
+      200px 40px 0 0 #9370DB, 
+      20px 60px 0 0 #800080, 
+      40px 60px 0 0 #9370DB, 
+      60px 60px 0 0 #800080, 
+      80px 60px 0 0 #9370DB, 
+      100px 60px 0 0 #800080, 
+      120px 60px 0 0 #9370DB, 
+      140px 60px 0 0 #800080, 
+      160px 60px 0 0 #9370DB, 
+      180px 60px 0 0 #800080, 
+      200px 60px 0 0 #9370DB, 
+      20px 80px 0 0 #800080, 
+      40px 80px 0 0 #9370DB, 
+      60px 80px 0 0 #800080, 
+      80px 80px 0 0 #9370DB, 
+      100px 80px 0 0 #800080, 
+      120px 80px 0 0 #9370DB, 
+      140px 80px 0 0 #800080, 
+      160px 80px 0 0 #9370DB, 
+      180px 80px 0 0 #800080, 
+      200px 80px 0 0 #9370DB, 
+      20px 100px 0 0 #800080, 
+      40px 100px 0 0 #9370DB, 
+      60px 100px 0 0 #800080, 
+      80px 100px 0 0 #9370DB, 
+      100px 100px 0 0 #800080, 
+      120px 100px 0 0 #9370DB, 
+      140px 100px 0 0 #800080, 
+      160px 100px 0 0 #9370DB, 
+      180px 100px 0 0 #800080, 
+      200px 100px 0 0 #9370DB, 
+      20px 120px 0 0 #800080, 
+      40px 120px 0 0 #9370DB, 
+      60px 120px 0 0 #800080, 
+      80px 120px 0 0 #9370DB, 
+      100px 120px 0 0 #800080, 
+      120px 120px 0 0 #9370DB, 
+      140px 120px 0 0 #800080, 
+      160px 120px 0 0 #9370DB, 
+      180px 120px 0 0 #800080, 
+      200px 120px 0 0 #9370DB, 
+      20px 140px 0 0 #800080, 
+      40px 140px 0 0 #9370DB, 
+      60px 140px 0 0 #800080, 
+      80px 140px 0 0 #9370DB, 
+      100px 140px 0 0 #800080, 
+      120px 140px 0 0 #9370DB, 
+      140px 140px 0 0 #800080, 
+      160px 140px 0 0 #9370DB, 
+      180px 140px 0 0 #800080, 
+      200px 140px 0 0 #9370DB, 
+      20px 160px 0 0 #800080, 
+      40px 160px 0 0 #9370DB, 
+      60px 160px 0 0 #800080, 
+      80px 160px 0 0 #9370DB, 
+      100px 160px 0 0 #800080, 
+      120px 160px 0 0 #9370DB, 
+      140px 160px 0 0 #800080, 
+      160px 160px 0 0 #9370DB, 
+      180px 160px 0 0 #800080, 
+      200px 160px 0 0 #9370DB, 
+      20px 180px 0 0 #800080, 
+      40px 180px 0 0 #9370DB, 
+      60px 180px 0 0 #800080, 
+      80px 180px 0 0 #9370DB, 
+      100px 180px 0 0 #800080, 
+      120px 180px 0 0 #9370DB, 
+      140px 180px 0 0 #800080, 
+      160px 180px 0 0 #9370DB, 
+      180px 180px 0 0 #800080, 
+      200px 180px 0 0 #9370DB, 
+      20px 200px 0 0 #800080, 
+      40px 200px 0 0 #9370DB, 
+      60px 200px 0 0 #800080, 
+      80px 200px 0 0 #9370DB, 
+      100px 200px 0 0 #800080, 
+      120px 200px 0 0 #9370DB, 
+      140px 200px 0 0 #800080, 
+      160px 200px 0 0 #9370DB, 
+      180px 200px 0 0 #800080, 
+      200px 200px 0 0 #9370DB;
+    
+    background-color: #800080;
+    animation: slide 20s infinite linear;
+  }
+  
+  @keyframes slide {
+    from {
+      transform: translate3d(0, 0, 0);
+    }
+    to {
+      transform: translate3d(-200px, -200px, 0);
+    }
+  }
+  </style>
+<div class="pixel-grid"><h1 class="text" style="font-family: "Press Start 2P";">Menahil-063</h1></div>
+<div class="pixel-grid">
+    <div class="text">Form 47</div>
+  
+    <div class="transparent"></div>
+    <div class="black"></div>
+    <div class="black"></div>
+    <div class="black"></div>
+    <div class="black"></div>
+    <div class="black"></div>
+    <div class="black"></div>
+    <div class="black"></div>
+    <div class="black"></div>
+    <div class="black"></div>
+    <div class="black"></div>
+    <div class="black"></div>
+    <div class="black"></div>
+    <div class="black"></div>
+    <div class="black"></div>
+    <div class="black"></div>
+    <div class="black"></div>
+    <div class="black"></div>
+    <div class="black"></div>
+    <div class="transparent"></div>
+    
+    <div class="black"></div>
+    <div class="lightg"></div>
+    <div class="white"></div>
+    <div class="white"></div>
+    <div class="white"></div>
+    <div class="white"></div>
+    <div class="white"></div>
+    <div class="white"></div>
+    <div class="white"></div>
+    <div class="white"></div>
+    <div class="white"></div>
+    <div class="white"></div>
+    <div class="white"></div>
+    <div class="white"></div>
+    <div class="white"></div>
+    <div class="white"></div>
+    <div class="white"></div>
+    <div class="white"></div>
+    <div class="lightg"></div>
+    <div class="black"></div>
+    
+    <div class="black"></div>
+    <div class="white"></div>
+    <div class="white"></div>
+    <div class="white"></div>
+    <div class="white"></div>
+    <div class="white"></div>
+    <div class="white"></div>
+    <div class="white"></div>
+    <div class="white"></div>
+    <div class="white"></div>
+    <div class="white"></div>
+    <div class="white"></div>
+    <div class="white"></div>
+    <div class="white"></div>
+    <div class="white"></div>
+    <div class="white"></div>
+    <div class="white"></div>
+    <div class="white"></div>
+    <div class="white"></div>
+    <div class="black"></div>
+    
+    <div class="black"></div>
+    <div class="white"></div>
+    <div class="white"></div>
+    <div class="white"></div>
+    <div class="white"></div>
+    <div class="white"></div>
+    <div class="white"></div>
+    <div class="white"></div>
+    <div class="white"></div>
+    <div class="white"></div>
+    <div class="white"></div>
+    <div class="white"></div>
+    <div class="white"></div>
+    <div class="white"></div>
+    <div class="white"></div>
+    <div class="white"></div>
+    <div class="white"></div>
+    <div class="white"></div>
+    <div class="white"></div>
+    <div class="black"></div>
+    
+    <div class="black"></div>
+    <div class="white"></div>
+    <div class="white"></div>
+    <div class="white"></div>
+    <div class="white"></div>
+    <div class="white"></div>
+    <div class="white"></div>
+    <div class="white"></div>
+    <div class="white"></div>
+    <div class="white"></div>
+    <div class="white"></div>
+    <div class="white"></div>
+    <div class="white"></div>
+    <div class="white"></div>
+    <div class="white"></div>
+    <div class="white"></div>
+    <div class="white"></div>
+    <div class="white"></div>
+    <div class="white"></div>
+    <div class="black"></div>
+    
+    <div class="black"></div>
+    <div class="white"></div>
+    <div class="white"></div>
+    <div class="white"></div>
+    <div class="white"></div>
+    <div class="white"></div>
+    <div class="white"></div>
+    <div class="white"></div>
+    <div class="white"></div>
+    <div class="white"></div>
+    <div class="white"></div>
+    <div class="white"></div>
+    <div class="white"></div>
+    <div class="white"></div>
+    <div class="white"></div>
+    <div class="white"></div>
+    <div class="white"></div>
+    <div class="white"></div>
+    <div class="white"></div>
+    <div class="black"></div>
+    
+    <div class="black"></div>
+    <div class="lightg"></div>
+    <div class="white"></div>
+    <div class="white"></div>
+    <div class="white"></div>
+    <div class="white"></div>
+    <div class="white"></div>
+    <div class="white"></div>
+    <div class="white"></div>
+    <div class="white"></div>
+    <div class="white"></div>
+    <div class="white"></div>
+    <div class="white"></div>
+    <div class="white"></div>
+    <div class="white"></div>
+    <div class="white"></div>
+    <div class="white"></div>
+    <div class="white"></div>
+    <div class="lightg"></div>
+    <div class="black"></div>
+    
+    <div class="black"></div>
+    <div class="grey"></div>
+    <div class="lightg"></div>
+    <div class="lightg"></div>
+    <div class="lightg"></div>
+    <div class="lightg"></div>
+    <div class="lightg"></div>
+    <div class="lightg"></div>
+    <div class="lightg"></div>
+    <div class="lightg"></div>
+    <div class="lightg"></div>
+    <div class="lightg"></div>
+    <div class="lightg"></div>
+    <div class="lightg"></div>
+    <div class="lightg"></div>
+    <div class="lightg"></div>
+    <div class="lightg"></div>
+    <div class="lightg"></div>
+    <div class="grey"></div>
+    <div class="black"></div>
+    
+    <div class="transparent"></div>
+    <div class="black"></div>
+    <div class="black"></div>
+    <div class="black"></div>
+    <div class="black"></div>
+    <div class="black"></div>
+    <div class="black"></div>
+    <div class="black"></div>
+    <div class="black"></div>
+    <div class="black"></div>
+    <div class="black"></div>
+    <div class="black"></div>
+    <div class="black"></div>
+    <div class="black"></div>
+    <div class="black"></div>
+    <div class="black"></div>
+    <div class="black"></div>
+    <div class="black"></div>
+    <div class="black"></div>
+    <div class="transparent"></div>
+  </div>
+  
+  <!-- background grid -->
+  <div class="background">
+    <div class="background-tile"></div>
+    <div class="background-tile"></div>
+    <div class="background-tile"></div>
+    <div class="background-tile"></div>
+    <div class="background-tile"></div>
+    <div class="background-tile"></div>
+    <div class="background-tile"></div>
+    <div class="background-tile"></div>
+    <div class="background-tile"></div>
+    <div class="background-tile"></div>
+    <div class="background-tile"></div>
+    <div class="background-tile"></div>
+    <div class="background-tile"></div>
+    <div class="background-tile"></div>
+    <div class="background-tile"></div>
+    <div class="background-tile"></div>
+    <div class="background-tile"></div>
+    <div class="background-tile"></div>
+    <div class="background-tile"></div>
+    <div class="background-tile"></div>
+    <div class="background-tile"></div>
+    <div class="background-tile"></div>
+    <div class="background-tile"></div>
+    <div class="background-tile"></div>
+    <div class="background-tile"></div>
+    <div class="background-tile"></div>
+    <div class="background-tile"></div>
+    <div class="background-tile"></div>
+    <div class="background-tile"></div>
+    <div class="background-tile"></div>
+    <div class="background-tile"></div>
+    <div class="background-tile"></div>
+    <div class="background-tile"></div>
+    <div class="background-tile"></div>
+    <div class="background-tile"></div>
+    <div class="background-tile"></div>
+    <div class="background-tile"></div>
+    <div class="background-tile"></div>
+    <div class="background-tile"></div>
+    <div class="background-tile"></div>
+    <div class="background-tile"></div>
+    <div class="background-tile"></div>
+    <div class="background-tile"></div>
+    <div class="background-tile"></div>
+    <div class="background-tile"></div>
+    <div class="background-tile"></div>
+    <div class="background-tile"></div>
+    <div class="background-tile"></div>
+    <div class="background-tile"></div>
+    <div class="background-tile"></div>
+    <div class="background-tile"></div>
+    <div class="background-tile"></div>
+    <div class="background-tile"></div>
+    <div class="background-tile"></div>
+    <div class="background-tile"></div>
+    <div class="background-tile"></div>
+    <div class="background-tile"></div>
+    <div class="background-tile"></div>
+    <div class="background-tile"></div>
+    <div class="background-tile"></div>
+    <div class="background-tile"></div>
+    <div class="background-tile"></div>
+    <div class="background-tile"></div>
+    <div class="background-tile"></div>
+    <div class="background-tile"></div>
+    <div class="background-tile"></div>
+    <div class="background-tile"></div>
+    <div class="background-tile"></div>
+  </div>
+  
+
+  <div class="pixel-grid">
+    <div class="text"><a href="https://codepen.io/Juxtopposed" target="_blank">Website</a></div>
+  
+    <div class="transparent"></div>
+    <div class="black"></div>
+    <div class="black"></div>
+    <div class="black"></div>
+    <div class="black"></div>
+    <div class="black"></div>
+    <div class="black"></div>
+    <div class="black"></div>
+    <div class="black"></div>
+    <div class="black"></div>
+    <div class="black"></div>
+    <div class="black"></div>
+    <div class="black"></div>
+    <div class="black"></div>
+    <div class="black"></div>
+    <div class="black"></div>
+    <div class="black"></div>
+    <div class="black"></div>
+    <div class="black"></div>
+    <div class="transparent"></div>
+    
+    <div class="black"></div>
+    <div class="lightg"></div>
+    <div class="white"></div>
+    <div class="white"></div>
+    <div class="white"></div>
+    <div class="white"></div>
+    <div class="white"></div>
+    <div class="white"></div>
+    <div class="white"></div>
+    <div class="white"></div>
+    <div class="white"></div>
+    <div class="white"></div>
+    <div class="white"></div>
+    <div class="white"></div>
+    <div class="white"></div>
+    <div class="white"></div>
+    <div class="white"></div>
+    <div class="white"></div>
+    <div class="lightg"></div>
+    <div class="black"></div>
+    
+    <div class="black"></div>
+    <div class="white"></div>
+    <div class="white"></div>
+    <div class="white"></div>
+    <div class="white"></div>
+    <div class="white"></div>
+    <div class="white"></div>
+    <div class="white"></div>
+    <div class="white"></div>
+    <div class="white"></div>
+    <div class="white"></div>
+    <div class="white"></div>
+    <div class="white"></div>
+    <div class="white"></div>
+    <div class="white"></div>
+    <div class="white"></div>
+    <div class="white"></div>
+    <div class="white"></div>
+    <div class="white"></div>
+    <div class="black"></div>
+    
+    <div class="black"></div>
+    <div class="white"></div>
+    <div class="white"></div>
+    <div class="white"></div>
+    <div class="white"></div>
+    <div class="white"></div>
+    <div class="white"></div>
+    <div class="white"></div>
+    <div class="white"></div>
+    <div class="white"></div>
+    <div class="white"></div>
+    <div class="white"></div>
+    <div class="white"></div>
+    <div class="white"></div>
+    <div class="white"></div>
+    <div class="white"></div>
+    <div class="white"></div>
+    <div class="white"></div>
+    <div class="white"></div>
+    <div class="black"></div>
+    
+    <div class="black"></div>
+    <div class="white"></div>
+    <div class="white"></div>
+    <div class="white"></div>
+    <div class="white"></div>
+    <div class="white"></div>
+    <div class="white"></div>
+    <div class="white"></div>
+    <div class="white"></div>
+    <div class="white"></div>
+    <div class="white"></div>
+    <div class="white"></div>
+    <div class="white"></div>
+    <div class="white"></div>
+    <div class="white"></div>
+    <div class="white"></div>
+    <div class="white"></div>
+    <div class="white"></div>
+    <div class="white"></div>
+    <div class="black"></div>
+    
+    <div class="black"></div>
+    <div class="white"></div>
+    <div class="white"></div>
+    <div class="white"></div>
+    <div class="white"></div>
+    <div class="white"></div>
+    <div class="white"></div>
+    <div class="white"></div>
+    <div class="white"></div>
+    <div class="white"></div>
+    <div class="white"></div>
+    <div class="white"></div>
+    <div class="white"></div>
+    <div class="white"></div>
+    <div class="white"></div>
+    <div class="white"></div>
+    <div class="white"></div>
+    <div class="white"></div>
+    <div class="white"></div>
+    <div class="black"></div>
+    
+    <div class="black"></div>
+    <div class="lightg"></div>
+    <div class="white"></div>
+    <div class="white"></div>
+    <div class="white"></div>
+    <div class="white"></div>
+    <div class="white"></div>
+    <div class="white"></div>
+    <div class="white"></div>
+    <div class="white"></div>
+    <div class="white"></div>
+    <div class="white"></div>
+    <div class="white"></div>
+    <div class="white"></div>
+    <div class="white"></div>
+    <div class="white"></div>
+    <div class="white"></div>
+    <div class="white"></div>
+    <div class="lightg"></div>
+    <div class="black"></div>
+    
+    <div class="black"></div>
+    <div class="grey"></div>
+    <div class="lightg"></div>
+    <div class="lightg"></div>
+    <div class="lightg"></div>
+    <div class="lightg"></div>
+    <div class="lightg"></div>
+    <div class="lightg"></div>
+    <div class="lightg"></div>
+    <div class="lightg"></div>
+    <div class="lightg"></div>
+    <div class="lightg"></div>
+    <div class="lightg"></div>
+    <div class="lightg"></div>
+    <div class="lightg"></div>
+    <div class="lightg"></div>
+    <div class="lightg"></div>
+    <div class="lightg"></div>
+    <div class="grey"></div>
+    <div class="black"></div>
+    
+    <div class="transparent"></div>
+    <div class="black"></div>
+    <div class="black"></div>
+    <div class="black"></div>
+    <div class="black"></div>
+    <div class="black"></div>
+    <div class="black"></div>
+    <div class="black"></div>
+    <div class="black"></div>
+    <div class="black"></div>
+    <div class="black"></div>
+    <div class="black"></div>
+    <div class="black"></div>
+    <div class="black"></div>
+    <div class="black"></div>
+    <div class="black"></div>
+    <div class="black"></div>
+    <div class="black"></div>
+    <div class="black"></div>
+    <div class="transparent"></div>
+  </div>
+  
+  </div>
+  <style></style>

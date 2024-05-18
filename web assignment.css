@@ -1,0 +1,661 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Top Bar Styles */
+.top-bar {
+    background-color: #d7d7d7;
+    color: #fff;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 45px;
+}
+.top-bar span{
+   position: relative;
+}
+.top-barr {
+    display: flex;
+}
+.top-barr span{
+    margin-top: 13px;
+    color: #000000;
+    font-size: large;
+}
+.empty{
+    background-color: #007bff;
+    width: 100%;
+    height: 4px;
+}
+
+.follow-us a img {
+    width: 25px;
+    height:25px;
+    margin-right: 5px;
+    border-radius: 3px;
+    
+
+}
+.follow-us span{
+    margin-top: 2px;
+    font-size: large;
+    margin-right: 5px;
+    color: #000000;
+
+}
+.social-icons a {
+    color: #fff;
+    margin-left: 10px;
+}
+
+/* Header Styles */
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #f5f5f5;
+}
+
+.logo a {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    text-decoration: none;
+    font-family: sans-serif;
+}
+
+.logo span {
+    color: #007bff;
+    font-family:Tahoma;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: #333;
+    text-decoration: none;
+    font-family: sans-serif;
+}
+
+nav ul li a:hover {
+    color: #007bff;
+}
+.search-icon {
+    font-size: 18px;
+}
+
+/* Hero Section Styles */
+.hero {
+    background-color: #f5f5f5;
+    padding: 50px;
+    height: 450px;
+    background-image: url(https://www.artwise.com.my/src/slide/1.jpg);
+}
+
+.carousel {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+}
+
+.carousel-slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.carousel-slide.active {
+    opacity: 1;
+}
+
+.slide-content {
+    max-width: 1000px;
+}
+
+.slide-content span {
+    font-size: 40px;
+    margin-top: 20px;
+    background-color: hsla(0, 0%, 0%, 0.436);
+    font-family: serif;
+    color: #f7f7f7;
+}
+
+.slide-content p {
+    font-size: 18px;
+    margin-top: 30px;
+    background-color: hsla(0, 0%, 0%, 0.45);
+    border: 2px;
+    font-family: Arial;
+    margin-bottom: 15px;
+    color: #f7f7f7;
+}
+
+.slide-content button {
+    background-color: hsla(300, 5%, 76%, 0.635);
+   
+    border: solid black;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.slide-image img {
+    max-width: 100%;
+    height: auto;
+}
+
+.carousel-controls {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+.carousel-controls img{
+    width: 4px;
+    height: 4px;
+}
+.prev,
+.next {
+    font-size: 30px;
+    color: #333;
+    cursor: pointer;
+}
+/* Our Services Section */
+.our-services {
+    text-align: center;
+    padding: 50px 0;
+}
+
+.our-services h2 {
+    font-size: 36px;
+    margin-bottom: 30px;
+}
+
+.services-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.service {
+    margin: 0 20px;
+    position: relative;
+}
+
+.service-image {
+    position: relative;
+}
+
+.service-image img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+.service-content {
+    background-color: #333;
+    
+    color: #fff;
+    padding: 30px;
+    text-align: left;
+}
+
+.service-icon {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.service-content h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.service-content p {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.find-out-more {
+    background-color: hsla(0, 0%, 0%, 0);
+    color: #fff;
+    border:solid#f7f7f7 2px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+}
+
+.find-out-more i {
+    margin-left: 10px;
+}
+/* Additional Styles for Other Sections */
+/* ... */
+/* Reset default styles */
+.logoo a {
+    font-size: 24px;
+    font-weight: bold;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.logoo span {
+    color: #007bff;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styles */
+
+
+/* Section styles */
+.process-section {
+    text-align: center;
+    padding: 40px;
+
+}
+
+/* Heading styles */
+h2 {
+  
+    font-size: 36px;
+    margin-bottom: 30px;
+}
+
+/* Step container styles */
+.steps {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Individual step styles */
+.step {
+    flex: 1;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Step image styles */
+.step img {
+    width: 250px;
+    height: 250px;
+    margin-bottom: 10px;
+}
+
+/* Step text styles */
+.step p {
+    font-size: 17px;
+    color: #333;
+}
+.step button {
+    border-radius: 90%;
+    background-color: #007bff;
+    padding: 20px;
+    align-items: center;
+    position:relative;
+    border: 4px solid rgb(167, 163, 163);
+    color: #f7f7f7;
+    font-size: 30px;
+}
+
+/* styles.css */
+.recent-projects {
+    text-align: center;
+}
+
+.project-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.project {
+    position: relative;
+}
+
+.project img {
+    width: 300px;
+    height: auto;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.project:hover .overlay {
+    opacity: 1;
+}
+
+.overlay img {
+    width: 50px;
+    height: auto;
+    cursor: pointer;
+}
+
+.view-portfolio {
+    margin-top: 20px;
+    background-color: #ffffff;
+    color: #000000;
+    border: 2px solid black;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-bottom: 30px;
+}
+
+/* styles.css */
+/* styles.css */
+/* Global Styles */
+
+footer {
+    background-size: 100%;
+    padding: 20px;
+    border-top: 1px solid #ddd;
+    background-image: url(https://t4.ftcdn.net/jpg/03/16/78/11/360_F_316781115_ckiR3eI5AWPu3MUrhAcJkK8hJZFaBQXd.jpg);
+    color: #f5f5f5;
+    background-repeat: no-repeat;
+    background-size: cover;
+  
+    
+  }
+  .log{
+ float: right;
+  }
+  .footer-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background-color: #000000;
+  }
+  
+  .footer-links {
+    flex-basis: 20%;
+  }
+  
+  .footer-links a {
+    display: block;
+    margin-bottom: 10px;
+    color: #666;
+    text-decoration: none;
+  }
+  
+  .footer-links a:hover {
+    color: #333;
+  }
+  
+  .recent-blog {
+    flex-basis: 30%;
+    margin-left: 20px;
+  }
+  
+  .recent-blog h5 {
+    margin-top: 0;
+  }
+  
+  .recent-blog ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .recent-blog li {
+    margin-bottom: 10px;
+  }
+  
+  .recent-blog li:before {
+    content: "";
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background-color: #ccc;
+    margin-right: 10px;
+  }
+  
+  .contact-info {
+    flex-basis: 20%;
+    margin-left: 20px;
+  }
+  
+  .contact-info h5 {
+    margin-top: 0;
+    font-size: 20px;
+  }
+  
+  .contact-info p {
+    margin-bottom: 10px;
+  }
+  
+  .newsletter {
+    flex-basis: 30%;
+    margin-left: 20px;
+    display: flex;
+    
+  }
+  
+  .log span {
+    margin-top: 0;
+    font-size:small ;
+  }
+  
+  .log input {
+    width: 250px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    margin-bottom: 20px;
+    
+    
+  }
+  
+  .log button {
+    background-color: #1e45e4;
+    color: #fff;
+    padding: 5px ;
+    border: 1px solid;
+    position: absolute;
+    cursor: pointer;
+  }
+  .log input button{
+    display: inline;
+  }
+  .log span input button {
+    display: flex;
+    margin-right: 90px;
+  }
+  
+  .log button:hover {
+    background-color: hsla(0, 3%, 36%, 0.5);
+  }
+  
+  .copyright {
+    flex-basis: 100%;
+    text-align: center;
+    margin-top: 52px;
+  }
+  
+  .inquiry-now {
+    flex-basis: 100%;
+    text-align: center;
+    margin-top: 25px;
+  }
+  
+  .inquiry-now button {
+    background-color: #272525;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 13px;
+  }
+  
+  .inquiry-now button[type="button"]:hover {
+    background-color: #444;
+  }
+  .flex{
+    display: flex;
+  }
+.flex-container{
+    background-color: #000000;
+    margin-top: 10px;
+    width: 1400px;
+    height: 60px;
+    
+}
+.recent-blogg{
+    background-color: #444;
+    padding: 10px;
+    margin-top: 15px;
+}
+.contact-infoo{
+    margin-top: 10px;
+}
+.footer-linkss{
+    margin-top: 10px;
+    margin-left: 15px;
+    
+}
+.recent-blogg ul li{
+ list-style: none;
+}
+/* carousel */
+/* .carousel-caption{
+    background-color:hsla(0, 1%, 26%, 0.55);
+} */
+/* .c-item{
+    font-size: large;
+    color: #000000;
+} */
+.owl-carousel div h3{
+    position: absolute;
+   
+}
+.owl-carousel h3
+{
+    color:#fffdfd;
+   background-color: hsla(0, 3%, 36%, 0.5);
+   margin-top: 30%;
+   margin-left: 90px;
+}
+/* .item:hover{
+    opacity: 1;
+    background-color: hsla(0, 3%, 36%, 0.5);
+    
+} */
+.carousel-caption p {
+    background-color: rgba(53, 53, 53, 0.5);
+    
+    display: inline-block;
+    
+}
+
+.carousel-caption .btn {
+    border: 2px solid black;
+    border-radius: 0px;
+    width: 180px;
+    padding: 10px;
+    background-color: #b9b5b576;
+    float: left;
+}
+.carousel-control-prev-icon,
+        .carousel-control-next-icon {
+            background-color: rgba(0, 0, 0, 0.5); /* Add background color to icons */
+             /* Optional: To make them circular */
+            padding: 10px; /* Optional: To add padding around icons */
+        }
+        .carousel-control-prev,
+        .carousel-control-next {
+            width: 50px;
+        }
+        nav ul li a {
+            position: relative; /* Required for the underline effect */
+            text-decoration: none;
+            color: #333; /* Set the desired text color */
+          }
+          
+          nav ul li a::before {
+            content: "";
+            position: absolute;
+            bottom: -5px; /* Adjust the vertical position */
+            left: 0;
+            width: 100%;
+            height: 3px; /* Set the desired height of the underline */
+            background-color: #0077b6; /* Set the desired color of the underline */
+            transform: scaleX(0); /* Initially hide the underline */
+            transition: transform 0.3s ease-in-out; /* Add a smooth transition effect */
+          }
+          
+          nav ul li a:hover::before {
+            transform: scaleX(1); /* Show the underline on hover */
+          }
+          .slide-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0); /* Set initial opacity to 0 */
+            transition: background-color 0.3s ease; /* Add a transition for smooth effect */
+          }
+          
+          .slide-item:hover .slide-overlay {
+            background-color: rgba(0, 0, 0, 0.5);
+            background-image: url(images/images.png);/*
+         Overlay color on hover */
+             opacity:0.75;
+             background-repeat: no-repeat;
+             background-size: cover
+          }
+          
+          

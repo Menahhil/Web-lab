@@ -657,5 +657,14 @@ footer {
              background-repeat: no-repeat;
              background-size: cover
           }
-          
+           .wowalabar{
+            max-height: 100px;
+            margin-top: 20px;
+            padding-top: -10px;
+            background-color: black;
+            margin-bottom: -20px;
+            margin-left: -20px;
+            margin-right: -20px;
+            padding-bottom: 20px;
+          }
           

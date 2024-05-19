@@ -13,26 +13,29 @@ body {
     background-image: url(https://media.istockphoto.com/id/1026493200/vector/metal-textured-technology-background.jpg?s=612x612&w=0&k=20&c=CkhojXvv6Cgoe867Rg0W8GtxHW_FXD2AYnQA9wcNTUI=);
 }
 
-h1 {
-    text-align: center;
-}
+
 
 .form-group {
-    margin-bottom: 20px;
-    width: 200px;
+    
+    width: 160px;
     display: flex;
     
-        justify-content: space-between; /* Adjust alignment as needed */
+    justify-content: space-between;
+     /* Adjust alignment as needed */
     }
 
+
+.form-groupp span{
+    color: #5b5b5b;
+    font-size: x-small;
+    margin-bottom: 10px;
+}
 .form-groupp{
-    margin-bottom: 20px;
-    margin-top: 40px;
-    
+    margin-top: 10px;
 }
 .birth-date {
     display: flex;
-    align-items: center;
+   
   }
   
   .date-field {
@@ -42,17 +45,38 @@ h1 {
     padding: 10px;
 
   }
-  .data-field span{
-    margin-bottom: 20px;
+  .date-field span, input{
+    display: inline-block;
+  vertical-align: middle;
+  margin: 0;
+  padding: 0;
+  }
+  .birth-date span{
+    
+    color: #5b5b5b;
+    font-size: x-small;
+    margin-top: -20px;
+  }
+  .city span{
+    color: #5b5b5b;
+    font-size: x-small;
+  }
+  .form-groupp span{
     color: #5b5b5b;
     font-size: x-small;
   }
   .flex{
     display: flex;
     
-        justify-content: space-between; /* Adjust alignment as needed */
+     justify-content: space-between; 
+     margin-right: 40px;/* Adjust alignment as needed */
     
   }
+  .flexx{
+    display: flex;
+    margin-right: 10px;
+  }
+  
   .month,
   .day,
   .year {

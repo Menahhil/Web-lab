@@ -1,0 +1,160 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2; /* Set your desired background color */
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-image: url(https://media.istockphoto.com/id/1026493200/vector/metal-textured-technology-background.jpg?s=612x612&w=0&k=20&c=CkhojXvv6Cgoe867Rg0W8GtxHW_FXD2AYnQA9wcNTUI=);
+}
+
+h1 {
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    width: 200px;
+    display: flex;
+    
+        justify-content: space-between; /* Adjust alignment as needed */
+    }
+
+.form-groupp{
+    margin-bottom: 20px;
+    margin-top: 40px;
+    
+}
+.birth-date {
+    display: flex;
+    align-items: center;
+  }
+  
+  .date-field {
+    margin-right: 5px;
+    width: 100px;
+    height: 25px;
+    padding: 10px;
+
+  }
+  .data-field span{
+    margin-bottom: 20px;
+    color: #5b5b5b;
+    font-size: x-small;
+  }
+  .flex{
+    display: flex;
+    
+        justify-content: space-between; /* Adjust alignment as needed */
+    
+  }
+  .month,
+  .day,
+  .year {
+    padding: 5px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+.gender{
+    width: 250px;
+}
+.city{
+    width: 250px;
+}
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type="text"]:required,
+select:required {
+    border-color: red;
+}
+
+input[type="text"]:focus,
+select:focus {
+    outline: none;
+    border-color: blue;
+}
+
+
+
+
+
+h1 {
+    text-align: center;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input[type="email"],
+input[type="tel"],
+input[type="text"],
+select,
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type="email"]:focus,
+input[type="tel"]:focus,
+input[type="text"]:focus,
+select:focus,
+textarea:focus {
+    border-color: #5b4caf;
+    outline: none;
+}
+
+input:required,
+select:required {
+    border-color: #ff0000;
+}
+
+.buttons {
+    text-align: center;
+}
+
+button {
+    padding: 10px 20px;
+    margin: 5px;
+    border: none;
+    
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#submitApplication {
+    background-color: #4CAF50;
+    color: #fff;
+    margin-right: 250px;
+}
+
+#clearFields {
+    background-color:#4CAF50;
+    color: #fff;
+}
+
